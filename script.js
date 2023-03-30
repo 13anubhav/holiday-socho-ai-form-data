@@ -1,4 +1,3 @@
-
 function run(){
     var search = document.getElementById('input_field').value;   //formResult
     // var search = document.getElementById('formResult').text; 
@@ -283,9 +282,9 @@ function run(){
        // Display the form data on the web page
        //document.getElementById("formResult").innerHTML = "Form Data: " + allFormData + dataObject.name;
       // document.getElementById("input_field").innerHTML = "Form Data: " + allFormData ;
-       document.getElementById("formResult").innerHTML = "Plan a Trip to "+ dataObject.place + " for " + dataObject.days + " days with budget limit of " + dataObject.budget + " with " + dataObject.food +" food items and  " + dataObject.theme + " theme" ;
+       document.getElementById("formResult").innerHTML = "Plan a hourly Trip to "+ dataObject.place + " for " + dataObject.days + " days with budget limit of " + dataObject.budget + " along with the places to visit along with the restaurant name" ;
  
-       var form_data= "Plan a Trip to "+ dataObject.place + " for " + dataObject.days + " with budget limit of " + dataObject.budget + " with " + dataObject.food +" and  " + dataObject.theme +" theme" ;
+       var form_data= "Plan a hourly Trip to "+ dataObject.place + " for " + dataObject.days + " days with budget limit of " + dataObject.budget + " along with the places to visit along with the restaurant name" ;
  
  
        var search = form_data;
@@ -354,10 +353,10 @@ function run(){
     
    
      function run2(){
-      var search =   document.getElementById("formResult").innerHTML = "Plan a Trip to "+ dataObject.place + " for " + dataObject.days + " days with budget limit of " + dataObject.budget + " with " + dataObject.food +" food items and  " + dataObject.theme + " theme" ;
+      var search =   document.getElementById("formResult").innerHTML = "Plan a hourly Trip to "+ dataObject.place + " for " + dataObject.days + " days with budget limit of " + dataObject.budget + " along with the places to visit along with the restaurant name" ;
       search = form_data;
  
-      //var search = 
+      //var search = Plan a hourly Trip to goa for 3 days along with the places to visit along with the restaurant name
  
         // var search = document.getElementById('formResult').value;   //formResult
          // var search = document.getElementById('formResult').text; 
@@ -397,15 +396,22 @@ function run(){
         
                 .then(response => response.text())
                 .then(response =>  boxvalue = document.getElementById('input_field1').value = response )
-                      
+               
+                
                 
                 .catch(err => boxvalue = document.getElementById('input_field1').value = console.error(err));
-            
+        
+                
+        
+        
             }
             else
             {
                 //document.getElementById('input_field1').value = 'Invalid Input' ;
                 document.getElementById('input_field1').value = "Sorry, I cannot Generate output for this prompt as it is not related to the task of creating a daily itinerary. Please provide a valid Input. " ;
             }
+          
+       
+        
           
         }
